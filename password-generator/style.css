@@ -1,0 +1,86 @@
+:root {
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+  --green: #a4ffaf;
+  --white: #e6e5ea;
+  --grey: #817d92;
+  --grey-drk: #24232c;
+  --black: #18171f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: var(--grey);
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--white);
+  opacity: 25%;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* OUTPUT SECTION */
+.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  background-color: var(--grey-drk);
+}
+
+.copy-cont {
+  position: relative;
+}
+
+.copy-cont p {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  transform: translate(-130%, 20%);
+  font-weight: 700;
+  color: var(--green);
+}
+
+.copy-cont .active p {
+  display: block;
+}
+
+.copy-icon:hover path,
+.copy-icon:hover {
+  cursor: pointer;
+  fill: var(--white);
+}
