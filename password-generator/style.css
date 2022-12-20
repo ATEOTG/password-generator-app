@@ -32,7 +32,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 h1 {
@@ -46,6 +46,11 @@ h2 {
   font-size: 2.5rem;
   color: var(--white);
   opacity: 25%;
+}
+
+h3 {
+  font-size: 2.4rem;
+  color: var(--green);
 }
 
 p {
@@ -83,4 +88,70 @@ p {
 .copy-icon:hover {
   cursor: pointer;
   fill: var(--white);
+}
+
+/* FORM SECTION */
+.form {
+  background-color: var(--grey-drk);
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form p {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.length-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-cont {
+  width: 100%;
+  height: 8px;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  background-color: var(--black);
+  height: 8px;
+}
+
+.slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  appearance: none;
+  background: var(--white);
+  border-radius: 50%;
+  border-color: var(--white);
+  border-width: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  appearance: none;
+  background: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::-moz-range-thumb:hover,
+.slider::-moz-range-thumb:active {
+  background: var(--black);
+  border-color: var(--green);
+}
+.slider::-webkit-slider-thumb:hover,
+.slider::-webkit-slider-thumb:active {
+  background: var(--black);
+  border-color: var(--green);
 }
