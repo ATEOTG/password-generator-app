@@ -13,6 +13,8 @@ const barThree = document.getElementById("bar3");
 const barFour = document.getElementById("bar4");
 
 const strengthText = document.querySelector(".strength-desc");
+const button = document.querySelector(".generate-btn");
+
 const bars = [barOne, barTwo, barThree, barFour];
 let prevCount = 0;
 
@@ -20,6 +22,10 @@ sliderDisplay();
 prevCount = strengthBarDisplay();
 
 slider.addEventListener("input", sliderDisplay);
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (getCount() === 0) alert("Please check at least one box!");
+});
 checkBoxes.forEach((box) => box.addEventListener("click", strengthBarDisplay));
 
 function sliderDisplay() {
@@ -29,11 +35,7 @@ function sliderDisplay() {
 }
 
 function strengthBarDisplay() {
-  let count = 0;
-  if (upperCaseBox.checked) count++;
-  if (lowerCaseBox.checked) count++;
-  if (numberBox.checked) count++;
-  if (symbolBox.checked) count++;
+  const count = getCount();
 
   if (count === 0) {
     strengthText.innerHTML = "";
@@ -41,33 +43,38 @@ function strengthBarDisplay() {
   }
   if (count === 1) {
     strengthText.innerHTML = "TOO WEAK!";
-    for (const bar of bars) {
-      bar.classList.remove(`count${prevCount}`);
-      bar.classList.add("count1");
-    }
+    changeBarClass(prevCount, "count1");
   }
   if (count === 2) {
     strengthText.innerHTML = "WEAK";
-    for (const bar of bars) {
-      bar.classList.remove(`count${prevCount}`);
-      bar.classList.add("count2");
-    }
+    changeBarClass(prevCount, "count2");
   }
   if (count === 3) {
     strengthText.innerHTML = "MEDIUM";
-    for (const bar of bars) {
-      bar.classList.remove(`count${prevCount}`);
-      bar.classList.add("count3");
-    }
+    changeBarClass(prevCount, "count3");
   }
   if (count === 4) {
     strengthText.innerHTML = "STRONG";
-    for (const bar of bars) {
-      bar.classList.remove(`count${prevCount}`);
-      bar.classList.add("count4");
-    }
+    changeBarClass(prevCount, "count4");
   }
 
   prevCount = count;
   return count;
+}
+
+function getCount() {
+  let countChecked = 0;
+  if (upperCaseBox.checked) countChecked++;
+  if (lowerCaseBox.checked) countChecked++;
+  if (numberBox.checked) countChecked++;
+  if (symbolBox.checked) countChecked++;
+
+  return countChecked;
+}
+
+function changeBarClass(prevCount, newClass) {
+  for (const bar of bars) {
+    bar.classList.remove(`count${prevCount}`);
+    bar.classList.add(newClass);
+  }
 }
