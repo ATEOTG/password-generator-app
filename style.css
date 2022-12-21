@@ -276,3 +276,35 @@ p {
   background-color: var(--green);
   border: 2px solid var(--green);
 }
+
+/* BUTTON SECTION */
+.generate-btn {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  gap: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  background-color: var(--grey-drk);
+}
+
+.generate-btn:hover p {
+  color: var(--green);
+}
+
+.generate-btn:hover svg path {
+  fill: var(--green);
+}
+
+.generate-btn p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--black);
+}
