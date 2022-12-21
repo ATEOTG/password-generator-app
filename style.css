@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: var(--white);
   opacity: 25%;
 }
@@ -80,7 +80,7 @@ p {
   color: var(--green);
 }
 
-.copy-cont .active p {
+.copy-cont.active p {
   display: block;
 }
 
@@ -162,6 +162,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  margin-bottom: 1.2em;
 }
 
 .checkbox {
@@ -200,4 +201,78 @@ p {
   top: 0px;
   left: 0px;
   transform: translate(10%, 15%);
+}
+
+/* STRENGTH INDICATOR SECTION */
+.strength-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  padding: 1.5em;
+}
+
+.strength-cont .strength-title {
+  color: var(--grey);
+}
+
+.strength-bar-cont {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.strength-bars {
+  display: flex;
+  gap: 0.6em;
+}
+
+.strength-bar {
+  border: 2px solid vaR(--white);
+  width: 10px;
+  height: 28px;
+}
+
+#bar1.count1 {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+}
+#bar1.count2 {
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+}
+#bar1.count3 {
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+#bar1.count4 {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+#bar2.count2 {
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+}
+#bar2.count3 {
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+#bar2.count4 {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+#bar3.count3 {
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+#bar3.count4 {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+#bar4.count4 {
+  background-color: var(--green);
+  border: 2px solid var(--green);
 }
