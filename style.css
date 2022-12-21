@@ -57,6 +57,10 @@ p {
   font-size: 1.6rem;
 }
 
+label {
+  cursor: pointer;
+}
+
 /* OUTPUT SECTION */
 .output {
   display: flex;
@@ -231,6 +235,13 @@ p {
   border: 2px solid vaR(--white);
   width: 10px;
   height: 28px;
+}
+
+#bar1,
+#bar2,
+#bar3,
+#bar4 {
+  transition: 0.3s;
 }
 
 #bar1.count1 {
