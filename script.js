@@ -107,7 +107,13 @@ function generatePassword(){
   if(symbolBox.checked) options.push(symbols);
 
   password = "";
-  for(let i = 0; i < slider.value; i++){
+
+  for(const option of options){
+      const selectedValue = option[Math.floor(Math.random() * option.length)];
+      password += selectedValue;
+  }
+
+  for(let i = options.length; i < slider.value; i++){
      const selectedArr = options[Math.floor(Math.random() * options.length)];
      const selectedValue = selectedArr[Math.floor(Math.random() * selectedArr.length)];
      password += selectedValue;
