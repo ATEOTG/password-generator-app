@@ -46,6 +46,7 @@ h2 {
   font-size: 2.4rem;
   color: var(--white);
   opacity: 25%;
+  overflow: scroll;
 }
 
 h3 {
@@ -70,6 +71,10 @@ label {
   background-color: var(--grey-drk);
 }
 
+.output-text{
+  width: 65%;
+}
+
 .copy-cont {
   position: relative;
 }
@@ -79,7 +84,7 @@ label {
   display: none;
   top: 0;
   left: 0;
-  transform: translate(-130%, 20%);
+  transform: translate(-120%, 20%);
   font-weight: 700;
   color: var(--green);
 }
