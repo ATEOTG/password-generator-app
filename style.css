@@ -46,7 +46,7 @@ h2 {
   font-size: 2.4rem;
   color: var(--white);
   opacity: 25%;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 h3 {
@@ -336,6 +336,9 @@ label {
     font-size: 72%;
   }
   
+  h2{
+    overflow-x: hidden;
+  }
   body{
     background: linear-gradient(180deg ,#15141b 0%, #0a0a0e 100%);
   }
@@ -365,10 +368,10 @@ label {
   }
 }
 
-@media(min-width: 90em){
+@media(min-width: 75em){
 
   h2{
-    overflow:visible
+    overflow-x:visible;
   }
   
   h3, h2{
