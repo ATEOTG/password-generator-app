@@ -84,7 +84,7 @@ label {
   color: var(--green);
 }
 
-.copy-cont.active p {
+.copy-text.active{
   display: block;
 }
 
@@ -295,8 +295,9 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5em;
+  padding: 1em;
   gap: 1.2em;
+  margin-bottom: .5em;
   cursor: pointer;
   transition: 0.3s;
 }
