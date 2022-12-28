@@ -71,7 +71,7 @@ label {
   background-color: var(--grey-drk);
 }
 
-.output-text{
+.output-text {
   width: 65%;
 }
 
@@ -89,7 +89,7 @@ label {
   color: var(--green);
 }
 
-.copy-text.active{
+.copy-text.active {
   display: block;
 }
 
@@ -206,7 +206,7 @@ label {
 }
 
 .inputBox:checked::after {
-  content: url("/assets/images/icon-check.svg");
+  content: url("./assets/images/icon-check.svg");
   position: absolute;
   top: 0px;
   left: 0px;
@@ -225,7 +225,7 @@ label {
 .strength-cont .strength-title {
   color: var(--grey);
 }
-.strength-desc{
+.strength-desc {
   font-size: 1.8rem;
 }
 
@@ -306,7 +306,7 @@ label {
   justify-content: center;
   padding: 1em;
   gap: 1.2em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -331,65 +331,61 @@ label {
 }
 
 /* MEDIA SECTION */
-@media(min-width: 48em){
-  html{
+@media (min-width: 48em) {
+  html {
     font-size: 72%;
   }
-  
-  h2{
+
+  h2 {
     overflow-x: hidden;
   }
-  body{
-    background: linear-gradient(180deg ,#15141b 0%, #0a0a0e 100%);
+  body {
+    background: linear-gradient(180deg, #15141b 0%, #0a0a0e 100%);
   }
 
-  h1{
+  h1 {
     font-size: 2.2rem;
   }
-  .container{
+  .container {
     width: 65%;
     max-width: 47rem;
   }
 
-
-  .output{
-    padding: 2em ;
+  .output {
+    padding: 2em;
   }
 
-  .copy-cont p{
+  .copy-cont p {
     transform: translate(-120%, 5%);
   }
-  .output-text{
+  .output-text {
     width: 80%;
   }
 
-  .form{
+  .form {
     padding: 2em 3em;
   }
 }
 
-@media(min-width: 75em){
-
-  h2{
-    overflow-x:visible;
-  }
-  
-  h3, h2{
-  font-size: 2.8rem;
+@media (min-width: 75em) {
+  h2 {
+    overflow-x: visible;
   }
 
+  h3,
+  h2 {
+    font-size: 2.8rem;
+  }
 
-  .strength-cont{
+  .strength-cont {
     padding: 2em 2.5em;
   }
 
-  .generate-btn{
+  .generate-btn {
     padding: 1.5em 1em;
   }
 
-  .strength-desc{
+  .strength-desc {
     font-size: 2rem;
   }
-
-  
 }
